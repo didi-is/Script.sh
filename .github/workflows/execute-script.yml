@@ -1,19 +1,18 @@
-name: Exécution du script Termux
+name: Execute Script
 
 on:
   push:
     branches:
-      - main  # Le workflow se déclenchera à chaque push sur la branche main.
+      - main
 
 jobs:
   run-script:
-    runs-on: ubuntu-latest  # Utilise un environnement Ubuntu pour exécuter le script.
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # Télécharge le code depuis votre dépôt.
+        uses: actions/checkout@v2
 
-      - name: Rendre le script exécutable
-        run: chmod +x votre-script.sh  # Remplacez "votre-script.sh" par le nom de votre script.
-
-      - name: Exécuter le script
-        run: ./votre-script.sh  # Exécutez votre script.
+      - name: Run script
+        run: |
+          chmod +x ./path/to/your/script.sh
+          ./path/to/your/script.sh
