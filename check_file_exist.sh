@@ -3,7 +3,7 @@
 
 read -p "Entrez le nom du fichier : " fichier
 
-if [[ -z "$fichier" ]]; then
+if [[ -f "$fichier" ]]; then
   echo "Erreur : Aucun nom de fichier fourni."
   exit 1
 fi
