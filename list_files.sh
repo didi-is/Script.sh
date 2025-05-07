@@ -5,7 +5,7 @@
 # -h : Affiche les tailles en format lisible (e.g., Ko, Mo)
 # --color=auto : Ajoute des couleurs pour distinguer les types de fichiers
 
-if [[ $(ls -A 2>/dev/null) ]]; then
+if [[ $(ls -A) ]]; then
   ls -1h --color=auto
 else
   echo "Le répertoire courant est vide."
