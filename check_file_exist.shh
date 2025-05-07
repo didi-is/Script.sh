@@ -1,7 +1,0 @@
-#!/bin/bash
-#ce script vérifie si un fichier donné existe ou non
-if [ -f "$fichier" ]; then 
-     echo "Le fichier '$fichier' existe."
-else
-     echo "Le fichier '$fichier' n'existe pas."
-fi
