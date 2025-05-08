@@ -1,3 +1,4 @@
+#!/bin/bash
 name: Exécution du script hello_world
 
 on:
