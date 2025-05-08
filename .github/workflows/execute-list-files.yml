@@ -1,0 +1,20 @@
+name: Exécution du script list_files.sh
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupération du dépôt
+        uses: actions/checkout@v2
+
+      - name: Rendre le script exécutable
+        run: chmod +x list_files.sh
+
+      - name: Exécuter le script
+        run: ./list_files.sh
