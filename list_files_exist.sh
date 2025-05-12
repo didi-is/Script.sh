@@ -1,14 +1,28 @@
 #!/bin/bash
-#se Script affiche la liste des fichiers du répertoire courant
+# Ce script affiche la liste de tous les fichiers du répertoire courant de plusieurs façons
+echo ">> Affichage simple des fichiers :"
+ls
+echo ""
 
-echo "Liste détaillée des fichiers du répertoire courant :"
-ls -lh --color=auto
+echo ">> Affichage détaillé (droits, propriétaire, taille, date) :"
+ls -l
+echo ""
 
-echo -e "\nListe uniquement des fichiers (sans les répertoires) :"
-find . -maxdepth 1 -type f
+echo ">> Affichage avec tailles lisibles (en K, M, G...) :"
+ls -lh
+echo ""
 
-echo -e "\nListe des fichiers triés par date de modification (du plus récent au plus ancien) :"
-ls -lt --color=auto
+echo ">> Affichage de tous les fichiers, y compris les fichiers cachés :"
+ls -a
+echo ""
 
-echo -e "\nListe des fichiers y compris les fichiers cachés :"
-ls -lha --color=auto
+echo ">> Affichage combiné : détails + fichiers cachés + tailles lisibles :"
+ls -lha
+echo ""
+
+echo ">> Fichiers triés par date de modification (du plus récent au plus ancien) :"
+ls -lt
+echo ""
+
+echo ">> Fichiers triés par taille (du plus lourd au plus léger) :"
+ls -lS
