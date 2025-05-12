@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/bash
-# Script pour afficher la liste des fichiers du répertoire courant
-echo "Liste des fichiers dans le répertoire courant :"
+#!/bin/bash
+# Script pour lister les fichiers du répertoire courant avec détails
+echo "Liste des fichiers du répertoire courant :"
 ls -lh --color=auto
