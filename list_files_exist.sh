@@ -1,12 +1,13 @@
 #!/bin/bash
-#se script vérifie si le nom du fichier existe ou pas
-# Demande à l'utilisateur le nom du fichier
-echo "Entrez le nom du fichier à vérifier :"
-read fichier
+# Ce script affiche la liste de tous les fichiers du répertoire c>
+# Options :
+# -1 : Affiche un fichier par ligne
+# -h : Affiche les tailles en format lisible (e.g., Ko, Mo)
+# --color=auto : Ajoute des couleurs pour distinguer les types de>
 
-# Vérifie si le fichier existe
-if [ -f "$fichier" ]; then
-    echo "Le fichier '$fichier' existe."
+if [[ $(ls -A) ]]; then
+  ls -1h --color=auto
 else
-    echo "Le fichier '$fichier' n'existe pas."
+  echo "Le répertoire courant est vide."
 fi
+
