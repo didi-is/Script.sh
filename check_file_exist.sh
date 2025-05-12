@@ -1,7 +1,10 @@
 #!/bin/bash
-#se script vérifie si le nom du fichier existe ou pas
-echo "Entrez le nom du fichier à vérifier :"
+
+# Ce script vérifie si un fichier donné existe ou non
+
+echo -n "Entrez le nom du fichier : "
 read fichier
+
 if [ -f "$fichier" ]; then
     echo "Le fichier '$fichier' existe."
 else
