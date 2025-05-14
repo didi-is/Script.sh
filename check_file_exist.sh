@@ -1,10 +1,10 @@
 #!/bin/bash
-# Ce script verifie si un fichier existe ou non
-echo  "Entrez le nom du fichier : "
+# Demande de saisir un fichier à vérifier
+echo "Entrez le nom du fichier :"
 read filename
+# Vérification de l'existence du fichier
 if [ -f "$filename" ]; then
-    echo "Le fichier '$filename' existe."
-fi
-if [ ! -f "$filename" ]; then 
-    echo "Le fichier '$filename' n'existe pas."
+echo "Le fichier '$filename' existe."
+else
+echo "Le fichier '$filename' n'existe pas."
 fi
